@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.link_vide:focus {
+  border-color: #cccccc;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.link_vide{
+ width: 100%; 
+  max-width: 50%;
+  padding: 15px;
+  margin: auto;
+  border-radius: 5px;
+}
+.card:hover{
+  border: 2px solid;
+}
+.link_vide .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.feed{
+  width: 100%;
+  padding: 30px;
+}
+.feed_c{
+  background-color: #F3f3f3 ;
+}
+
+.title{
+  margin: 10px;
+  text-align: center;
+  font-size: 50px;
+}
+
+a{
+  color: black;
+
+}
+a:hover {
+  color: black;
+}
