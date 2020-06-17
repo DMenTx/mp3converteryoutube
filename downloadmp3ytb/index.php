@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Download MP3 Youtube</title>
+	<title>Rock News</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,15 +12,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h1 class="display-3 title">Converter vídeo do YouTube para MP3/Audio</h1>
-	<form class="link_vide">
-		<div class="input-group">
-			<input type="text" class="form-control" name="link_tb" id="link_tb" placeholder="Exemplo: https://www.youtube.com/watch?v=y0uTub3v1de0">
-			<div class="input-group-append">
-				<button onclick="download()" type="submit" class="btn btn-outline-dark">Converter</button>	
-			</div>
-		</div>	
-	</form>
+	<h1 class="display-3 title">Ultimas noticias do <a href="https://whiplash.net">Whiplash.net</a> e <a href="https://rollingstone.uol.com.br">Rolling Stone Uol</a></h1>
 	
 	<div class="modal fade" id="modalDownload" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-sm">
@@ -44,8 +36,9 @@
 		
 	$xml = array(simplexml_load_file("https://whiplash.net/feeds/news.xml"), simplexml_load_file("https://rollingstone.uol.com.br/feed"));
 	$c=0;
+	//var_dump($xml);
 	$news = array();
-	for ($j=0; $j < count($xml); $j++) { 
+	 for ($j=0; $j < count($xml); $j++) { 
 		for($i=0;$i<12;$i++) {
 			$nRand = rand(0, count($xml)-1);
 			$link = (string) $xml[$nRand]->channel->item[$i]->link;
@@ -77,7 +70,7 @@
 	?>
 	<footer>
 		<center>
-			Powered by God 2019	
+			Powered by <a href="https://github.com/mr-dmtx">DMTX</a> 2019	
 		</center>
 		
 	</footer>
